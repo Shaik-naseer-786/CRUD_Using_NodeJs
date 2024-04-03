@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>edit</th>
+                <th>delete</th>
+            </tr>
+            <tr>
+                <td><%= rows[0].id %></td>
+                <td><%= rows[0].username %></td>
+                <td><a href="/edit/<%= rows[0].id %>">Edit</a></td> <!-- Link to edit page with user ID -->
+                <td><a href="/delete/<%= rows[0].id %>">Delete</a></td> <!-- Link to delete user with user ID -->
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
